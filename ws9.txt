@@ -1,0 +1,50 @@
+Script started on 2021-11-24 01:51:53+00:00 [TERM="screen" TTY="/dev/pts/3" COLUMNS="120" LINES="29"]
+xu@f6linux15:~$ history -c
+xu@f6linux15:~$ touch randomsampe[Kle.sh
+xu@f6linux15:~$ chmod 755 randomsample.sh 
+
+# I wrote the script on another terminal window so the output wouldn't get messed up
+
+# Showing that this randomly samples via the shuf command
+
+xu@f6linux15:~$ ./randomsample.sh 1 amazon_book_raw.tsv | head -n 10 | cut -f 2
+24524878
+42505302
+52820994
+52891068
+38584129
+38360819
+41988825
+49409424
+52755335
+52556992
+xu@f6linux15:~$ ./randomsample.sh 1 amazon_book_raw.tsv | head -n 10 | cut -f 2
+30726914
+50413000
+46072197
+19586542
+27646574
+51058508
+28604288
+39828223
+51930165
+51623418
+
+# Basic argument checks
+
+xu@f6linux15:~$ ./randomsample.sh 1
+Invalid arguments!
+Format: <integers 1-99 inclusive> <file>
+xu@f6linux15:~$ ./randomsample.sh 1[Kamazon_book_raw.tsv 
+Invalid arguments!
+Format: <integers 1-99 inclusive> <file>
+xu@f6linux15:~$ ./randomsample.sh amazon_book_raw.tsv [K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kn_book_raw.tsv 1
+File in wrong argument!
+Format: <integers 1-99 inclusive> <file>
+xu@f6linux15:~$ ./randomsample.sh amazon_book_raw.tsv 1[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+Invalid arguments!
+Format: <integers 1-99 inclusive> <file>
+xu@f6linux15:~$ history > cmds.log[Cwcmds.logscmds.log9cmds.log/cmds.log
+xu@f6linux15:~$ exit
+
+Script done on 2021-11-24 07:15:11+00:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,8 @@
+    1  touch randomsample.sh
+    2  chmod 755 randomsample.sh 
+    3  ./randomsample.sh 1 amazon_book_raw.tsv | head -n 10 | cut -f 2
+    4  ./randomsample.sh 1
+    5  ./randomsample.sh amazon_book_raw.tsv 
+    6  ./randomsample.sh amazon_book_raw.tsv 1
+    7  ./randomsample.sh
+    8  history > ws9/cmds.log
